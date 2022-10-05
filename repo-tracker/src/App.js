@@ -11,8 +11,9 @@ function App() {
             <main>
                 <Routes>
 
-                    <Route path="/" element={<Search />}/>
-                     <Route path=":repo" element={<Repo />}>
+                    <Route path="/" element={<Search />}>
+                     <Route path=":repo" element={<Repo />}></Route>
+                    </Route>
                 </Routes>
             </main>
         </div>
