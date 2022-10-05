@@ -1,18 +1,31 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './style.css';
 
-export default function ({ result }) {
-    return (
-        <section>
-        <div id="sunrise">
-            <img src="../../images/sun.png" alt="Sun" />
-            <p>{result.sunrise}</p>
+const Result = (data) => {
+    
+    
+
+        console.log('we have the data', data)
+        const names = [];
+       
+
+        data.forEach(repo => {
+            names.push(repo.name)
+        })
+        
+        console.log('names of repos', names)
+        
+        
+    
+        
+    
+    return(
+        <div id="repo-div">
+
+       <p>{names[0]}</p>
         </div>
 
-        <div id="sunset">
-            <img src="../../images/moon.png" alt="Moon" />
-            <p>{result.sunset}</p>
-        </div>
-        </section>
     )
 }
+
+export default Result;

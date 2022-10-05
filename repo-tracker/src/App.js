@@ -1,7 +1,8 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { NavBar } from './components';
-import { Welcome, Search, Repo} from './pages'
+import { Search, Repo} from './pages'
+
 
 function App() {
     return (
@@ -9,14 +10,13 @@ function App() {
             <NavBar />
             <main>
                 <Routes>
-                    <Route path="/" element={<Welcome />}></Route>
-                    <Route path="/search" element={<Search />}>
-                        <Route path=":repo" element={<Repo />}>
-                    </Route>
-                    </Route>
-            </Routes>
-        </main>
-        </div >
+
+                    <Route path="/" element={<Search />}/>
+                     <Route path=":repo" element={<Repo />}>
+                </Routes>
+            </main>
+        </div>
+
     )
 }
 
