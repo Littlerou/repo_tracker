@@ -10,11 +10,11 @@ function Repo() {
     const params = useParams()
     
     const username = useSelector(state => state.username)
-    
+
     useEffect(() => {
         const fetchRepo = async () => {
             try {
-                const { data } = await axios.get(`https://api.github.com/repos/${username}/${params.repo}`)
+                const { data } = await axios.get(`https://api.github.com/repos/${params.user}/${params.repo}`)
                 setRepoData(data)
                 console.log(repoData.forks)
             } catch (error) {

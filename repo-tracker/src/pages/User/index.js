@@ -39,7 +39,7 @@ function User() {
             <h1>{params.user}</h1>
 
             {names.map((name) => (
-                <a href={`/${name}`}>{name}</a>
+                <a href={`/${params.user}/${name}`}>{name}</a>
             ))}
 
 
