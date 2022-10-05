@@ -43,7 +43,7 @@ function User() {
             </ul>
             {names.map((name) => (
                <li>  
-                   <a href={`/${params.user}/${name}`}>{name}</a>
+                   <a style={{color:'inherit'}} href={`/${params.user}/${name}`}>{name}</a>
                </li> 
             ))}
 
