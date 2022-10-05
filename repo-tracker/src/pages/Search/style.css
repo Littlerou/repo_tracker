@@ -1,15 +1,4 @@
-*{
-    margin:0px;
-    padding:0px;
-    box-sizing: border-box;
-}
-
-:roots{
-    --background:#102B3F;
-    --text:#C0E8F9;
-    --border:#7D6B91;
-}
-
-body{
-    background-color: var(--background);
+a{
+    color:black;
+    
 }

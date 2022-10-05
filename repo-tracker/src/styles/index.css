@@ -1,0 +1,33 @@
+@import './variables.css';
+
+* { box-sizing: border-box; }
+
+:roots{
+    --background:#102B3F;
+    --text:#C0E8F9;
+    --border:#7D6B91;
+}
+body {
+    font-family: var(--font-primary);
+    margin: 0;
+    text-align: center;
+    background-color: var(--background);
+}
+
+main {
+    padding: 50px;
+}
+
+input, button {
+    border: none;
+    font-family: var(--font-primary);
+    text-transform: uppercase;
+    background-color: var(--opacity);
+    color: var(--secondary)
+}
+
+[type="text"] {
+    border: 1px solid olive;
+    border-radius: 5px;
+    text-align: center;
+}
