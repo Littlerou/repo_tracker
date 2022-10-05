@@ -1,27 +1,31 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useEffect } from 'react-redux';
 import { SearchForm, Result } from '../../components';
-import { getResult } from '../../actions';
+import axios from 'axios';
 
-function Search(){
+function Search() {
 
-    const username = useSelector(state => state.username);
-    const loading = useSelector(state => state.loading);
-    const error = useSelector(state => state.error)
+    useEffect(() => {
+        const fetchStudents = async () => {
+            try {
+                const { data } = await axios.get(`https://api.github.com/users/${username}/repos`)
+                console.log(data)
+            } catch (error) {
+                console.log(error)
 
-    const dispatch = useDispatch();
-    
-    const search = searchTerm => dispatch(getResult(searchTerm));
+            }
+        }
+        fetchStudents()
+    }, [])
 
-
-
+    const username = useSelector(state => state.username)
     return (
         <div id="search">
             Where do you want to search?
-            <SearchForm getResult={search}/>
+            <SearchForm />
 
             <h1>{username}</h1>
-            
+
         </div>
     );
 

@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-function SearchForm({ getResult }) {
+function SearchForm() {
 
     const [ username, setUsername ] = useState("")
+    const dispatch = useDispatch()
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        dispatch({ type: 'SEARCH', payload: username})
         setUsername('')
         
     }
