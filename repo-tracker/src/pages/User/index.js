@@ -2,18 +2,20 @@ import { React, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { SearchForm, Result } from '../../components';
 import axios from 'axios';
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useParams } from "react-router-dom";
 
-import './style.css'
-function Search() {
+function User() {
 
     const [repos, setRepos] = useState([])
 
     const username = useSelector(state => state.username)
+
+    const params = useParams()
+
     useEffect(() => {
         const fetchRepos = async () => {
             try {
-                const { data } = await axios.get(`https://api.github.com/users/${username}/repos`)
+                const { data } = await axios.get(`https://api.github.com/users/${params.user}/repos`)
                 setRepos(data)
                 console.log(data)
             } catch (error) {
@@ -32,9 +34,13 @@ function Search() {
 
 
     return (
-        <div id="search">
-            Where do you want to search?
-            <SearchForm />
+        <div id="user">
+
+            <h1>{params.user}</h1>
+
+            {names.map((name) => (
+                <a href={`/${params.user}/${name}`}>{name}</a>
+            ))}
 
 
             <Outlet/>
@@ -44,5 +50,4 @@ function Search() {
     );
 
 }
-
-export default Search;
+export default User;

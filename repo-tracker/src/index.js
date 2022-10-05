@@ -13,9 +13,8 @@ const store = createStore(searchReducer);
 
 ReactDOM.render(
     <Provider store={store}>
-
-    <Router>
-        <App />
-    </Router>,
+        <Router>
+            <App />
+        </Router>,
     </Provider>,
-document.getElementById("root"));
+    document.getElementById("root"));
