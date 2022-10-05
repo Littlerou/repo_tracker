@@ -1,25 +1,48 @@
+:root{
+    --background:#102B3F;
+    --text:#C0E8F9;
+    --border:#7D6B91;
+}
+
+
+
 nav {
     width: 100%;
-    background-color: var(--primary);
     padding: 25px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    color: var(--text);
+    border: 5px solid var(--border);
+    border-radius: 10px;
+    margin: 20px;
 }
 
 a { 
-    color: var(--opacity);
     text-decoration: none;
     font-size: 1rem;
     text-transform: uppercase;
 }
 
 a:hover { 
-    font-weight: 800;
-    color: white;
+    font-weight: bold;
+    
 }
 
 .active {
-    color: white;
+    color:var(--text)
 }
 
-.home-link { color: wheat; }
+.home-link { 
+    color: var(--text); 
+    font-size: 30px;
+}
+
+
+button{
+    background: transparent;
+    text-transform: uppercase;
+    color: var(--text);
+    border: none;
+    font-size: 30px;
+
+}

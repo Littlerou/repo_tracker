@@ -33,7 +33,7 @@ function Search() {
 
     return (
         <div id="search">
-            Where do you want to search?
+            <p>Enter your GitHub username:</p>
             <SearchForm />
 
             <Outlet/>

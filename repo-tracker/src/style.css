@@ -1,0 +1,17 @@
+:root{
+    --background:#102B3F;
+    --text:#C0E8F9;
+    --border:#7D6B91;
+}
+
+
+body{
+    background-color: var(--background);
+    color: var(--text);
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
