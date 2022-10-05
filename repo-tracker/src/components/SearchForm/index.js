@@ -1,19 +1,22 @@
 import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
-function SearchForm({ getResult }) {
+function SearchForm() {
 
-    const [ location, setLocation ] = useState("")
+    const [ username, setUsername ] = useState("")
+    const dispatch = useDispatch()
+
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        getResult(location);
-        setLocation('')
+        dispatch({ type: 'SEARCH', payload: username})
+        setUsername('')
         
     }
 
     const updateInput = (e) => {
         const input = e.target.value 
-        setLocation(input)
+        setUsername(input)
     }
 
     
@@ -22,7 +25,7 @@ function SearchForm({ getResult }) {
         <form role="form" onSubmit={handleSubmit}>
             
 
-            <input aria-label="Location" type="text" value={location} onChange={updateInput}/>
+            <input aria-label="username" type="text" value={username} onChange={updateInput}/>
             
             <input type="submit" value="Search" />
         </form>
