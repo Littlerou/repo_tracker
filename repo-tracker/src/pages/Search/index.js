@@ -2,10 +2,11 @@ import { React, useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { SearchForm, Result } from '../../components';
 import axios from 'axios';
+import { Link, Outlet } from "react-router-dom";
 
 function Search() {
 
-    const [ repos, setRepos ] = useState([])
+    // const [ repos, setRepos ] = useState([])
     
     const username = useSelector(state => state.username)
     useEffect(() => {
@@ -27,6 +28,7 @@ function Search() {
             <SearchForm />
 
             <h1>{username}</h1>
+            <Outlet/>
 
         </div>
     );
