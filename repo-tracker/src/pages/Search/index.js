@@ -1,12 +1,13 @@
-import React from 'react';
-import { useSelector, useEffect } from 'react-redux';
+import React , { useEffect }from 'react';
+import { useSelector } from 'react-redux';
 import { SearchForm, Result } from '../../components';
 import axios from 'axios';
 
 function Search() {
 
+    const username = useSelector(state => state.username)
     useEffect(() => {
-        const fetchStudents = async () => {
+        const fetchRepos = async () => {
             try {
                 const { data } = await axios.get(`https://api.github.com/users/${username}/repos`)
                 console.log(data)
@@ -15,10 +16,9 @@ function Search() {
 
             }
         }
-        fetchStudents()
-    }, [])
+        fetchRepos()
+    }, [username])
 
-    const username = useSelector(state => state.username)
     return (
         <div id="search">
             Where do you want to search?
