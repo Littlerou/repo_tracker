@@ -19,14 +19,15 @@ function Repo() {
                 console.log(repoData.forks)
             } catch (error) {
                 console.log(error)
-
+                
             }
         }
         fetchRepo()
     }, [username])
 
-  return (
-    <div className="content">
+    
+    return (
+        <div className="content">
         <h1>{params.repo}</h1>
         <ul>
             <li>Forks: {repoData.forks}</li>
