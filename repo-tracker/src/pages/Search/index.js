@@ -36,6 +36,13 @@ function Search() {
             Where do you want to search?
             <SearchForm />
 
+            <h1>{username}</h1>
+
+            {names.map((name) => (
+                <Link to={`${name}`}>{name}</Link>
+            ))}
+
+
 
             <Outlet/>
 
