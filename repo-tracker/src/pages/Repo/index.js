@@ -29,7 +29,7 @@ function Repo() {
     return (
         <div className="content">
         <h1>{params.repo}</h1>
-        <ul>
+        <ul style={{listStyle : 'none'}}>
             <li>Forks: {repoData.forks}</li>
             <li>Stargazers: {repoData.stargazers_count}</li>
             <li>Clone URL: {repoData.clone_url}</li>

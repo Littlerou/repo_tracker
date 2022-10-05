@@ -30,10 +30,15 @@ function Search() {
         names.push(repo.name)
     })
 
+    const [ aboutDisplay, setAboutDisplay ] = useState('block')
 
+    useEffect(() => {
+        window.location.href === 'http://localhost:3000/' ? setAboutDisplay('block') : setAboutDisplay('none')
+        console.log(aboutDisplay);
+    }, [window.location.href])
     return (
         <>
-            <div id="about" style={{display: window.location.href === 'http://localhost:3000/' ? 'block' : 'none'}}>
+            <div id="about" style={{display: aboutDisplay }}>
                 <h2>
                     This site was created by Isobel Melvin & Bradley Neve
                 </h2>
