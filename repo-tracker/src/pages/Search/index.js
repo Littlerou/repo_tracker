@@ -39,7 +39,7 @@ function Search() {
             <h1>{username}</h1>
 
             {names.map((name) => (
-                <Link to={`${name}`}>{name}</Link>
+                <Link to={`${username}/${name}`}>{name}</Link>
             ))}
 
 
