@@ -1,1 +1,1 @@
-export { default as searchReducer } from './searchReducer';
+export { default as searchReducer } from './searchReducer'

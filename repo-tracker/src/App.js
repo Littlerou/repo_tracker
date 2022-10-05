@@ -1,8 +1,10 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { NavBar } from './components';
-import { Search, Repo} from './pages'
+
+import { Search, Repo, User } from './pages'
 import './style.css'
+
 
 
 function App() {
@@ -12,8 +14,12 @@ function App() {
             <main>
                 <Routes>
 
-                    <Route path="/" element={<Search />}/>
-                    <Route path=":repo" element={<Repo />}/>
+                    <Route path="/" element={<Search />}>
+                        <Route path=":user" element={<User />}>
+                            <Route path=":repo" element={<Repo />}></Route>
+                        </Route>
+                    </Route>
+
                 </Routes>
             </main>
         </div>

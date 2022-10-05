@@ -10,8 +10,7 @@ function SearchForm() {
     const handleSubmit = (e) => {
         e.preventDefault()
         dispatch({ type: 'SEARCH', payload: username})
-        setUsername('')
-        
+        window.location.href = window.location.href + username    
     }
 
     const updateInput = (e) => {
