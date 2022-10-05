@@ -7,7 +7,7 @@ import { createStore, applyMiddleware } from 'redux';
 import App from './App'
 import { searchReducer } from './reducers';
 
-import './styles/index.css';
+
 
 const store = createStore(searchReducer);
 

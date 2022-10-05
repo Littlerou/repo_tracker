@@ -1,0 +1,16 @@
+:root{
+    --background:#102B3F;
+    --text:#C0E8F9;
+    --border:#7D6B91;
+}
+
+
+input{
+    background: transparent;
+    border: none;
+    border-bottom: 5px solid var(--border);
+    margin: 10px;
+    color: var(--text);
+    padding: 5px;
+    font-size: 20px;
+}
