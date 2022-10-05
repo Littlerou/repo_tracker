@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import './style.css'
+
 function SearchForm() {
 
     const [ username, setUsername ] = useState("")
@@ -23,9 +23,10 @@ function SearchForm() {
     return (
         <form role="form" onSubmit={handleSubmit}>
             
+
             <input aria-label="username" type="text" value={username} onChange={updateInput}/>
-            <input type="submit" value="Search" id="search-button"/>
             
+            <input type="submit" value="Search" />
         </form>
     );
 };
