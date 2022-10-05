@@ -36,7 +36,6 @@ function Search() {
             Where do you want to search?
             <SearchForm />
 
-
             <Outlet/>
 
 
