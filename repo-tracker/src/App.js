@@ -1,37 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import Card from './components/Card';
-import './App.css';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import { NavBar } from './components';
+import { Welcome, About, Search } from './pages'
 
 function App() {
-  const [students, setStudents] = useState([])
-
-  useEffect(() => {
-    const fetchStudents = async () => {
-      try {
-        const { data } = await axios.get('https://raw.githubusercontent.com/getfutureproof/fp_study_notes_hello_github/main/shaw/roster.json')
-        const newStudents = data.students
-        setStudents(newStudents)
-      } catch (error) {
-        console.log(error)
-
-      }
-    }
-    fetchStudents()
-  }, [])
-
-
-  const renderStudents = students.map((student, idx) => {
-    return (<Card key={idx} name={student.name} github={student.github} />)
-  })
-
-  return (
-    <div className="App">
-      <h2>students below</h2>
-      {renderStudents}
-
-    </div>
-  );
+    return (
+        <div id="app">
+            <NavBar />
+            <main>
+                <Routes>
+                    <Route path="/" element={<Welcome />}/>
+                    <Route path="/about" element={<About />} />
+                    <Route path="/search" element={<Search />}/>
+                </Routes>
+            </main>
+        </div>
+    )
 }
 
 export default App;
