@@ -12,7 +12,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Search />}>
                         <Route path=":user" element={<User />}>
-                            <Route path=":user/:repo" element={<Repo />}></Route>
+                            <Route path=":repo" element={<Repo />}></Route>
                         </Route>
                     </Route>
                 </Routes>
