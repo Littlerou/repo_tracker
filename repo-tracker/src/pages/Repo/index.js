@@ -10,6 +10,7 @@ function Repo() {
     const params = useParams()
     
     const username = useSelector(state => state.username)
+
     useEffect(() => {
         const fetchRepo = async () => {
             try {
