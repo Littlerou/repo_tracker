@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { NavBar } from './components';
 import { Search, Repo} from './pages'
+import './style.css'
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
                 <Routes>
 
                     <Route path="/" element={<Search />}/>
-                     <Route path=":repo" element={<Repo />}>
+                    <Route path=":repo" element={<Repo />}/>
                 </Routes>
             </main>
         </div>

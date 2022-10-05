@@ -7,7 +7,6 @@ const NavBar = () => {
     return (
         <nav>
             <NavLink className="home-link" to="/" end>Home</NavLink>
-            <NavLink  to="/search">Search</NavLink>
             <button onClick={() => navigate(-1)}>Back</button>
         </nav>
     );

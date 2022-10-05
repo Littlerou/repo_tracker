@@ -4,12 +4,13 @@
     box-sizing: border-box;
 }
 
-:roots{
+:root{
     --background:#102B3F;
     --text:#C0E8F9;
     --border:#7D6B91;
 }
 
 body{
-    background-color: var(--background);
+    background-color:var(--background);
+    /* outer style */
 }

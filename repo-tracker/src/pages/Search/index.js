@@ -38,7 +38,7 @@ function Search() {
             <h1>{username}</h1>
 
             {names.map((name) => (
-                <a href={`/${name}`}>{name}</a>
+                <Link to={`${name}`}>{name}</Link>
             ))}
 
 
