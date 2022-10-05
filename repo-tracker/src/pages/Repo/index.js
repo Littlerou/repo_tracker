@@ -1,9 +1,13 @@
-import React from "react";
+import { React, useEffect } from "react";
 import { useParams } from 'react-router-dom'
+import { useSelector } from 'react-redux';
+import axios from "axios";
 
 function Repo() {
 
     const params = useParams()
+    
+    const username = useSelector(state => state.username)
     useEffect(() => {
         const fetchRepo = async () => {
             try {
@@ -20,6 +24,12 @@ function Repo() {
   return (
     <div className="content">
         <h1>{params.repo}</h1>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
     </div>
     
   );
