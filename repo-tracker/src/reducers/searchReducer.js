@@ -1,4 +1,4 @@
-const initState = { username: ""};
+const initState = { username: "Littlerou"};
 
 const searchReducer = (state=initState, action) => {
     switch(action.type){
