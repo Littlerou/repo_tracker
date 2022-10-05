@@ -1,13 +1,9 @@
-const initState = { location: "London", result: { sunrise: "6:13:47 AM", sunset: "5:39:38 PM" }, loading: false };
+const initState = { username: ""};
 
 const searchReducer = (state=initState, action) => {
     switch(action.type){
-        case 'LOADING':
-            return { ...state, location: action.payload, loading: true };
-        case 'LOAD_RESULT':
-            return { ...state, result: action.payload, loading: false, error: false };
-        case 'SET_ERROR':
-            return { ...state, error: action.payload, loading: false }
+        case 'Search':
+            return { ...state, username: action.payload };
         default:
             return state;
     };

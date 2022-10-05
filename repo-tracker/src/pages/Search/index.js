@@ -5,8 +5,7 @@ import { getResult } from '../../actions';
 
 function Search(){
 
-    const result = useSelector(state => state.result);
-    const location = useSelector(state => state.location);
+    const username = useSelector(state => state.username);
     const loading = useSelector(state => state.loading);
     const error = useSelector(state => state.error)
 
@@ -14,7 +13,6 @@ function Search(){
     
     const search = searchTerm => dispatch(getResult(searchTerm));
 
-    const renderResult = () => loading ? <p>Loading . . .</p> : <Result result={result}/>
 
 
     return (
@@ -22,9 +20,7 @@ function Search(){
             Where do you want to search?
             <SearchForm getResult={search}/>
 
-            <h1>{location}</h1>
-
-            { error ? <p role="alert">Oops there's been an error! </p> : renderResult() }   
+            <h1>{username}</h1>
             
         </div>
     );

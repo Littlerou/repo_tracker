@@ -2,18 +2,17 @@ import React, { useState } from 'react';
 
 function SearchForm({ getResult }) {
 
-    const [ location, setLocation ] = useState("")
+    const [ username, setUsername ] = useState("")
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        getResult(location);
-        setLocation('')
+        setUsername('')
         
     }
 
     const updateInput = (e) => {
         const input = e.target.value 
-        setLocation(input)
+        setUsername(input)
     }
 
     
@@ -22,7 +21,7 @@ function SearchForm({ getResult }) {
         <form role="form" onSubmit={handleSubmit}>
             
 
-            <input aria-label="Location" type="text" value={location} onChange={updateInput}/>
+            <input aria-label="username" type="text" value={username} onChange={updateInput}/>
             
             <input type="submit" value="Search" />
         </form>
