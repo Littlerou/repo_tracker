@@ -23,8 +23,9 @@ a {
     text-transform: uppercase;
 }
 
-a:hover { 
+a:hover, button:hover { 
     font-weight: bold;
+    cursor: pointer;
     
 }
 
