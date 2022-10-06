@@ -27,7 +27,7 @@ function SearchForm() {
 
             <input aria-label="username" type="text" value={username} onChange={updateInput}/>
             
-            <input type="submit" value="Search" />
+            <input id={'submitBtn'} type="submit" value="Search" />
         </form>
     );
 };
